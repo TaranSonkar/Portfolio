@@ -559,6 +559,63 @@ button{
   letter-spacing:3px;
 }
 
+
+/* ===== PREMIUM BLOG ===== */
+.blog-hero{
+text-align:center;
+margin-bottom:50px;
+animation:fadeUp 1s ease;
+}
+.blog-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:25px;
+}
+.blog-card{
+position:relative;
+overflow:hidden;
+padding:30px;
+border:1px solid rgba(124,109,250,.25);
+background:linear-gradient(145deg,#0f1025,#17183a);
+transition:.6s;
+}
+.blog-card:before{
+content:'';
+position:absolute;
+top:0;
+left:-120%;
+width:70%;
+height:100%;
+background:linear-gradient(90deg,transparent,rgba(255,255,255,.15),transparent);
+transform:skewX(-25deg);
+transition:1s;
+}
+.blog-card:hover:before{left:160%;}
+.blog-card:hover{
+transform:translateY(-12px);
+box-shadow:0 25px 60px rgba(124,109,250,.35);
+border-color:var(--c2);
+}
+.blog-icon{
+font-size:50px;
+margin-bottom:15px;
+animation:float 3s infinite ease-in-out;
+}
+.blog-title2{
+font-size:28px;
+font-family:'Bebas Neue',sans-serif;
+letter-spacing:2px;
+margin:10px 0;
+}
+.blog-meta{
+color:var(--c2);
+font-size:11px;
+letter-spacing:3px;
+font-family:'Space Mono',monospace;
+}
+@keyframes float{50%{transform:translateY(-10px);}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:none}}
+
 /* ===== RESPONSIVE ===== */
 
 @media(max-width:950px){
@@ -651,6 +708,7 @@ button{
     <a href="#" class="nav active" data-page="home">Home</a>
     <a href="#" class="nav" data-page="about">About</a>
     <a href="#" class="nav" data-page="projects">Projects</a>
+    <a href="#" class="nav" data-page="blog">Blog</a>
     <a href="#" class="nav" data-page="contact">Contact</a>
   </div>
 
@@ -669,6 +727,7 @@ button{
   <a href="#" class="nav" data-page="home">Home</a>
   <a href="#" class="nav" data-page="about">About</a>
   <a href="#" class="nav" data-page="projects">Projects</a>
+  <a href="#" class="nav" data-page="blog">Blog</a>
   <a href="#" class="nav" data-page="contact">Contact</a>
 
 </div>
@@ -883,7 +942,45 @@ button{
 
 </section>
 
+
+<!-- BLOG -->
+<section class="page" id="blog">
+<div class="container">
+
+<div class="blog-hero">
+<div class="label">Knowledge & Insights</div>
+<div class="title">MY <span>BLOG</span></div>
+</div>
+
+<div class="blog-grid">
+
+<div class="blog-card">
+<div class="blog-icon">📊</div>
+<div class="blog-meta">POWER BI</div>
+<div class="blog-title2">Power BI Dashboard Secrets</div>
+<div class="text">Learn KPI design, storytelling, DAX optimization and executive reporting techniques.</div>
+</div>
+
+<div class="blog-card">
+<div class="blog-icon">🤖</div>
+<div class="blog-meta">N8N AUTOMATION</div>
+<div class="blog-title2">Build AI Agents</div>
+<div class="text">Create advanced AI workflows, automations and business process integrations.</div>
+</div>
+
+<div class="blog-card">
+<div class="blog-icon">🗄️</div>
+<div class="blog-meta">SQL</div>
+<div class="blog-title2">Advanced SQL Analytics</div>
+<div class="text">Master joins, CTEs, window functions and real-world analytics queries.</div>
+</div>
+
+</div>
+</div>
+</section>
+
 <!-- CONTACT -->
+
 
 <section class="page" id="contact">
 
